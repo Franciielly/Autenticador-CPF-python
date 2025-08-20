@@ -14,7 +14,8 @@ resposta = "sim"
 while resposta == "sim":
     while True: 
         cpf = input("Digite seu CPF(apenas números): ")
-        if cpf.isdigit() and len(cpf) == 11:
+        sequencia = cpf[0] * len(cpf)
+        if cpf.isdigit() and len(cpf) == 11 and cpf != sequencia:
             digitos = [int(d) for d in cpf]
             break
         else:
@@ -64,4 +65,5 @@ while resposta == "sim":
             print("Digite apenas 'sim' ou 'não'.")
     limpar_tela()
     
+
 print("Programa encerrado.")
